@@ -255,7 +255,7 @@ nav ol li a::before {
   background: none;
   color: var(--slate);
   outline: none;
-  border-left: var(--slate) 2px solid;
+  border-left: var(--dark-slate) 2px solid;
   font: 400 16px Arial;
 }
 
