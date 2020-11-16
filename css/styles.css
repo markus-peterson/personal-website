@@ -110,7 +110,8 @@ div.amchor {
 }
 
 nav ol {
-  width: fit-content;
+  /* width: fit-content; */
+  max-width: 450px;
   display: flex;
   justify-content: space-between;
   align-items: center;
