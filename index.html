@@ -41,16 +41,10 @@
                     </a>
                 </div>
                 <ol>
-                    <li><a href="/#about" style="transition-delay: 0ms;">About</a></li>
-                    <li><a href="/#experience" style="transition-delay: 0ms;">Experience</a></li>
-                    <li><a href="/#research" style="transition-delay: 0ms;">Research</a></li>
+                    <li><a href="/#about">About</a></li>
+                    <li><a href="/#experience">Experience</a></li>
+                    <li><a href="/#projects">Projects</a></li>
                 </ol>
-                <!-- <div class="small-menu">
-                    <ol>
-                        <li><a href="/#about" class="fadedown-enter-done" style="transition-delay: 0ms;">About</a></li>
-                        <li><a href="/#experience" class="fadedown-enter-done" style="transition-delay: 100ms;"></a></li>
-                    </ol>
-                </div> -->
             </nav>
         </header>
         <div class="content main">
@@ -64,18 +58,39 @@
             <div class="anchor" id="about"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">About Me</h2>
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
+                <div>
+                    <p class="fadeup-enter"></p>
+                    <p class="fadeup-enter"></p>
+                    <p class="fadeup-enter"></p>
+                </div>
             </div>
             <div class="anchor" id="experience"></div>
             <div class="section run">
-                <h2 class="number-heading fadeup-enter">Past Projects</h2>
+                <h2 class="number-heading fadeup-enter">Programming Language Experience</h2>
+                <div class="tabbed-area fadeup-enter">
+                    <div class="tabs" role="tablist" aria-label="Experience Tabs">
+                        <button class="tab" role="tab" aria-controls="panel-0" id="tab-0" tabindex=" 0" aria-selected="true" style="border-color: var(--blue);">Web</button>
+                        <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Java</button>
+                        <button class="tab" role="tab" aria-controls="panel-2" id="tab-2" tabindex="-1" aria-selected="false">C/Unix</button>
+                        <button class="tab" role="tab" aria-controls="panel-3" id="tab-3" tabindex="-1" aria-selected="false">Python</button>
+                        <!-- <li></li> -->
+                    </div>
+                    <div class="xp-content" id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0">
+                        <h3>Web Languages</h3>
+                        <p>When it comes to web and frontend developement, and especially deployment on a live server, I am most experienced and comfortable using React and Node.js for application functionallity. I also have some experience working with resources such as Three.js for 3D graphing and visual conponents.</p>
+                        <p>I have also built websites purely with HTML, CSS and JavaScript, like this website for example.</p>
+                    </div>
+                    <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden></div>
+                    <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden></div>
+                    <div class="xp-content" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden></div>
+                </div>
             </div>
-            <div class="anchor" id="research"></div>
+            <div class="anchor" id="projects"></div>
             <div class="section run">
-                <h2 class="number-heading fadeup-enter">Future Plans</h2>
+                <h2 class="number-heading fadeup-enter">Past Projects</h2>
+                <div>
+
+                </div>
             </div>
         </div>
         <div class="loader-wrapper" id="mydiv">
@@ -98,9 +113,8 @@
                         $(this).attr("style", `transition-delay: ${i*100}ms`).delay(1000).addClass('fadeup-enter-active');
                     });
                 }, 800);
-            }, 6000);
+            }, 10);
             $(document).ready(function() {
-                
                 $(window).scroll( function(){
                     $('.run').not('.viewed').each( function(){
                         var top_of_object = $(this).offset().top + $(this).height()/2;
@@ -114,9 +128,56 @@
                     }); 
                 });
             });
-            // $(document).ready(function() {
-                
-            // });
+            window.addEventListener("DOMContentLoaded", () => {
+                const tabs = document.querySelectorAll('[role="tab"]');
+                const tabList = document.querySelector('[role="tablist"]');
+                tabs.forEach(tab => {
+                    tab.addEventListener("click", changeTabs);
+                });
+                let tabFocus = 0;
+
+                tabList.addEventListener("keydown", e => {
+                    if (e.keyCode === 39 || e.keyCode === 37) {
+                        tabs[tabFocus].setAttribute("tabindex", -1);
+                        if (e.keyCode === 39) {
+                            tabFocus++;
+                            if (tabFocus >= tabs.length) {
+                                tabFocus = 0;
+                            }
+                        } else if (e.keyCode === 37) {
+                            tabFocus--;
+                            if (tabFocus < 0) {
+                                tabFocus = tabs.length - 1;
+                            }
+                        }
+                        tabs[tabFocus].setAttribute("tabindex", 0);
+                        tabs[tabFocus].focus();
+                    }
+                });
+            });
+
+            function changeTabs(e) {
+                const target = e.target;
+                const parent = target.parentNode;
+                const grandparent = parent.parentNode;
+                target.setAttribute("style", "border-color: var(--blue);");
+                parent
+                    .querySelectorAll('[aria-selected="true"]')
+                    .forEach(t => t.setAttribute("style", "border-color: var(--dark-slate);"));
+                parent
+                    .querySelectorAll('[aria-selected="true"]')
+                    .forEach(t => t.setAttribute("aria-selected", false));
+                target.setAttribute("aria-selected", true);
+                // Hide all tab panels
+                grandparent
+                    .querySelectorAll('[role="tabpanel"]')
+                    .forEach(p => p.setAttribute("hidden", true));
+
+                // Show the selected panel
+                grandparent.parentNode
+                    .querySelector(`#${target.getAttribute("aria-controls")}`)
+                    .removeAttribute("hidden");
+                }
         </script>
     </body>
 </html>

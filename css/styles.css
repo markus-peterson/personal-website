@@ -28,16 +28,17 @@ html {
 
 /* START STYLES HERE */
 :root {
-  --navy: #0a192f;
-  --navy-transparent: rgba(10, 24, 46, 0.6);
-  --lightest-navy: #303C55;
+  --navy: #04161d;
+  --navy-transparent: rgba(4, 22, 29, 0.6);
+  --lightest-navy: #303655;
   --navy-shadow: rgba(2,12,27,0.7);
+  --dark-slate: #484d5e;
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
-  --blue: #00DCFF;
-  --green-tint: rgba(100,255,218,0.1);
+  --blue: #00ddff;
+  --blue-tint: rgba(0, 221, 255, 0.1);
   --font-sans: "Calibre","San Francisco","SF Pro Text",sans-serif;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --fs-xxs: 12px;
@@ -65,7 +66,6 @@ body {
   font-family: var(--font-sans);
   font-size: var(--fs-xl);
   line-height: 1.3;
-  /* background-color: #383838; */
 }
 
 header {
@@ -78,7 +78,7 @@ header {
   box-shadow: 0 10px 30px -10px var(--navy-shadow);
   position: fixed;
   top: 0;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(7px);
   padding: 10px 40px;
   z-index: 10;
 }
@@ -190,7 +190,7 @@ nav ol li a::before {
 
 .section {
   flex-grow: 1;
-  width: 100%;
+  max-width: 100%;
   margin: 300px 0px;
   height: 500px;
   border-radius: 5px;
@@ -230,6 +230,55 @@ nav ol li a::before {
   margin-left: 20px;
   background-color: var(--lightest-navy);
 }
+
+.tabbed-area {
+  display: flex;
+
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  text-align: left;
+  align-items: center;
+  padding-top: 20px;
+}
+
+
+
+.tab {
+  padding: 0 20px 2px 20px;
+  border: none;
+  width: 88px;
+  height: 40px;
+  background: none;
+  color: var(--slate);
+  outline: none;
+  border-left: var(--slate) 2px solid;
+  font: 400 16px Arial;
+}
+
+
+.tab:hover {
+  cursor: pointer;
+  background-color: var(--blue-tint);
+}
+
+.xp-content {
+  max-width: 720px;
+  min-height: 300px;
+  margin-left: 30px;
+  padding: 0 5px;
+  font-size: 18px;
+  line-height: 1.3;
+  font-family: var(--font-sans);
+}
+.xp-content h3 {
+  margin-top: 10px;
+  color: var(--lightest-slate);
+}
+
 
 .fadedown-enter {
   opacity: 0;
