@@ -195,8 +195,6 @@ nav ol li a::before {
   text-align: right;
 }
 
-
-
 #dop-down {
   background-color: var(--dark-blue-transparent);
   box-shadow: 0 10px 30px -10px var(--blue-shadow);
