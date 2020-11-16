@@ -402,6 +402,10 @@ nav ol li a::before {
   color: var(--lightest-slate);
 }
 
+.xp-content:focus {
+  outline: none;
+}
+
 .project {
   display: flex;
   align-items: center;
