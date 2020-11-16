@@ -42,7 +42,7 @@
                 <ol>
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#experience">Experience</a></li>
-                    
+                    <li><a href="/#research">Research</a></li>
                     <li id="drop-down">
                             <a href="/#projects" >Projects</a>
                             <div id="menu" class="fademenu-enter">
@@ -100,12 +100,42 @@
                         <p></p>
                         <p></p>
                     </div>
+                    <div class="xp-content" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="anchor" id="research"></div>
+            <div class="section run">
+                <h2 class="number-heading fadeup-enter">Research Interests</h2>
+                <div class="tabbed-area fadeup-enter">
+                    <div class="tabs" role="tablist" aria-label="Experience Tabs">
+                        <button class="tab" role="tab" aria-controls="panel-0" id="tab-0" tabindex=" 0" aria-selected="true" style="border-color: var(--blue);">Optical Data</button>
+                        <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Transmission</button>
+                        <button class="tab" role="tab" aria-controls="panel-2" id="tab-2" tabindex="-1" aria-selected="false">Processing</button>
+                    </div>
+                    <div class="xp-content" id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0">
+                        <h3>Data Representation</h3>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class="anchor" id="projects"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Past Projects</h2>
-                
                 <div class="project fadeup-enter" id="p1">
                     <a href="https://github.com/markus-peterson/convolutionalASL" target="_blank"><img src="./images/Accuracy-Graph.png"/></a>
                     <div>
@@ -146,7 +176,7 @@
                         $(this).attr("style", `transition-delay: ${i*100}ms`).delay(1000).addClass('fadeup-enter-active');
                     });
                 }, 800);
-            }, 4500);
+            }, 10);
             $(function () {
                 $('#drop-down').hover(function () {
                     $('#menu').addClass('fademenu-enter-active');
