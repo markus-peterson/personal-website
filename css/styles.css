@@ -234,7 +234,7 @@ nav ol li a::before {
 
 .section {
   flex-grow: 1;
-  max-width: 100%;
+  max-width: 500px;
   margin: 250px 0px;
   height: 500px;
   border-radius: 5px;
