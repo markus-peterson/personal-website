@@ -43,25 +43,36 @@
                 <ol>
                     <li><a href="/#about">About</a></li>
                     <li><a href="/#experience">Experience</a></li>
-                    <li><a href="/#projects">Projects</a></li>
+                    
+                    <li id="drop-down">
+                            <a href="/#projects" >Projects</a>
+                            <div id="menu" class="fademenu-enter">
+                                <a href="/#p1">Neural Net</a>
+                                <a href="/#p2">Full Stack</a>
+                            </div>
+                    </li>
                 </ol>
             </nav>
         </header>
+        
         <div class="content main">
             <!-- <div class="test"></div> -->
             <div class="intro">
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
-                <h1 class="fadeup-enter">Test Element</h1>
+                <h3 class="fadeup-enter">Hello, my name is</h3>
+                <h1 class="fadeup-enter">Markus Peterson.</h1>
+                <h2 class="fadeup-enter">I build applications and research physics.</h2>
+                <p class="fadeup-enter">Currently, I am a Computer science student at Indiana University, specializing in program development. I am a full-stack developer, but my main interest is in front-end functionallity.</p>
             </div>
             <div class="anchor" id="about"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">About Me</h2>
-                <div>
-                    <p class="fadeup-enter"></p>
-                    <p class="fadeup-enter"></p>
-                    <p class="fadeup-enter"></p>
+                <div class="about-content fadeup-enter">
+                    <div>
+                        <p>Hello, I'm Markus Peterson. I am currently a Computer Science student at Indiana University.</p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <img src="./images/profile.jpg" id="profile"/>
                 </div>
             </div>
             <div class="anchor" id="experience"></div>
@@ -77,19 +88,55 @@
                     </div>
                     <div class="xp-content" id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0">
                         <h3>Web Languages</h3>
-                        <p>When it comes to web and frontend developement, and especially deployment on a live server, I am most experienced and comfortable using React and Node.js for application functionallity. I also have some experience working with resources such as Three.js for 3D graphing and visual conponents.</p>
+                        <p>When it comes to web and frontend development, and especially deployment on a live server, I am most experienced and comfortable using React and Node.js for application functionallity. I also have some experience working with resources such as Three.js for 3D graphing and visual conponents.</p>
                         <p>I have also built websites purely with HTML, CSS and JavaScript, like this website for example.</p>
                     </div>
-                    <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden></div>
-                    <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden></div>
-                    <div class="xp-content" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden></div>
+                    <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                        <h3></h3>
+                        <p></p>
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class="anchor" id="projects"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Past Projects</h2>
                 <div>
-
+                    <div class="project" id="p1">
+                        <div>
+                            <p></p>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <img src=""/>
+                    </div>
+                    <div class="project" id="p2">
+                        <img src=""/>
+                        <div>
+                            <p></p>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project" id="p3">
+                        <div>
+                            <p></p>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <img src=""/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,7 +160,15 @@
                         $(this).attr("style", `transition-delay: ${i*100}ms`).delay(1000).addClass('fadeup-enter-active');
                     });
                 }, 800);
-            }, 6000);
+            }, 10);
+            $(function () {
+                $('#drop-down').hover(function () {
+                    $('#menu').addClass('fademenu-enter-active');
+                }, function () {
+                    // on mouseout, reset
+                    $('#menu').removeClass('fademenu-enter-active');
+                });
+            });
             $(document).ready(function() {
                 $(window).scroll( function(){
                     $('.run').not('.viewed').each( function(){
