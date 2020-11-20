@@ -261,7 +261,7 @@ nav ol li a::before {
   display: flex;
   align-items: center;
   position: relative;
-  margin: 10px 0px 40px;
+  margin: 10px 0px 50px 0px;
   /* width: 100%; */
   font-size: var(--fs-heading);
   white-space: nowrap;
@@ -286,7 +286,7 @@ nav ol li a::before {
   content: "";
   display: block;
   position: relative;
-  width: 300px;
+  width: 1000px;
   height: 1px;
   margin-left: 20px;
   background-color: var(--lightest-blue);
