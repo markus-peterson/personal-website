@@ -79,7 +79,7 @@
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Programming Language Experience</h2>
                 <div class="tabbed-area fadeup-enter">
-                    <div class="tabs" role="tablist" aria-label="Experience Tabs">
+                    <div class="tabs" role="tablist" aria-label="Experience Tabs" id="tabs1">
                         <button class="tab" role="tab" aria-controls="panel-0" id="tab-0" tabindex=" 0" aria-selected="true" style="border-color: var(--blue);">Web</button>
                         <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Java</button>
                         <button class="tab" role="tab" aria-controls="panel-2" id="tab-2" tabindex="-1" aria-selected="false">C/Unix</button>
@@ -111,7 +111,7 @@
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Research Interests</h2>
                 <div class="tabbed-area fadeup-enter">
-                    <div class="tabs" role="tablist" aria-label="Experience Tabs">
+                    <div class="tabs" role="tablist" aria-label="Experience Tabs" id="tabs2">
                         <button class="tab" role="tab" aria-controls="panel-0" id="tab-0" tabindex=" 0" aria-selected="true" style="border-color: var(--blue);">Optical Data</button>
                         <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Transmission</button>
                         <button class="tab" role="tab" aria-controls="panel-2" id="tab-2" tabindex="-1" aria-selected="false">Processing</button>
@@ -145,14 +145,12 @@
                     </div>
                 </div>
                 <div class="project fadeup-enter" id="p2">
-                    <!-- <img src=""/>
                     <div>
+                        <h3></h3>
                         <p></p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div> -->
+                        <h5></h5>
+                    </div>
+                    <a href="https://quick-pick-job.herokuapp.com/" target="_blank"><img src="./images/quickpick.png"/></a>
                 </div>
             </div>
         </div>
@@ -188,10 +186,10 @@
             $(document).ready(function() {
                 $(window).scroll( function(){
                     $('.run').not('.viewed').each( function(){
-                        var top_of_object = $(this).offset().top + $(this).height()* (3/4);
+                        var top_of_object = $(this).offset().top + $(this).height()* 0.4;
                         var bottom_of_window = $(window).scrollTop() + $(window).height();
                         if( bottom_of_window > top_of_object ){
-                            $(this).addClass('viewed').delay(800);
+                            $(this).addClass('viewed');
                             $(this).children('.fadeup-enter').not('.fadeup-enter-active').map(function(i){
                                 $(this).attr("style", `transition-delay: ${i*100}ms`).addClass('fadeup-enter-active');
                             });
