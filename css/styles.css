@@ -355,6 +355,7 @@ nav ol li a::before {
 
 .tabbed-area {
   display: flex;
+  justify-content: center;
 }
 
 .tabs {
