@@ -46,16 +46,15 @@
                     <li id="drop-down">
                             <a href="/#projects" >Projects</a>
                             <div id="menu" class="fademenu-enter">
-                                <a href="/#p1">Neural Net</a>
-                                <a href="/#p2">Full Stack</a>
+                                <a href="/#convolutional">Neural Net</a>
+                                <a href="/#quickpick">QuickPick</a>
                             </div>
                     </li>
                 </ol>
             </nav>
         </header>
-        
         <div class="content main">
-            <!-- <div class="test"></div> -->
+            <!-- INTRO SECTION -->
             <div class="intro">
                 <h3 class="fadeup-enter">Hello, my name is</h3>
                 <h1 class="fadeup-enter">Markus Peterson.</h1>
@@ -67,7 +66,7 @@
                 <h2 class="number-heading fadeup-enter">About Me</h2>
                 <div class="about-content fadeup-enter">
                     <div>
-                        <p>Hello, I'm Markus Peterson. I am currently a Computer Science student at <a href="https://www.indiana.edu/" class="ext-link"  target="_blank">Indiana University</a>.</p>
+                        <p>Hello, I'm Markus Peterson. I am currently a Computer Science student at <a href="https://www.indiana.edu/" class="ext-link" target="_blank">Indiana University</a>.</p>
                         <p>I do full-stack development, but my main are of most familiarity is front-end functionallity.</p>
                         <p>Aside from development, I also like to reasearch topic like quantum and optical computing. Eventually, I plan on getting my masters in quantum computing and work in the researching field of computing.</p>
                         <p></p>
@@ -75,6 +74,7 @@
                     <img src="./images/profile.jpg" id="profile"/>
                 </div>
             </div>
+            <!-- PROGRAMMING EXPERIENCE SECTION -->
             <div class="anchor" id="experience"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Programming Language Experience</h2>
@@ -87,73 +87,91 @@
                     </div>
                     <div class="xp-content" id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0">
                         <h3>Web Languages</h3>
-                        <p>When it comes to web and frontend development, and especially deployment on a live server, I am most experienced and comfortable using React and Node.js for application functionallity. I also have some experience working with resources such as Three.js for 3D graphing and visual conponents.</p>
+                        <p>When it comes to web and frontend development, and especially deployment on a live server, I am most experienced and comfortable using <a href="https://reactjs.org/" class="ext-link"  target="_blank">React</a> and <a href="https://nodejs.org/" class="ext-link" target="_blank">Node.js</a> for application functionallity. I also have some experience working with resources such as <a href="https://threejs.org/" class="ext-link" target="_blank">Three.js</a> for 3D graphing and visual conponents.</p>
                         <p>I have also built websites purely with HTML, CSS and JavaScript, like this website for example.</p>
                     </div>
                     <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden>
-                        <h3></h3>
-                        <p></p>
-                        <p></p>
+                        <h3>Java Apps</h3>
+                        <p>Java was one of the first languages I ever learned and was the language that got me interested in the field of program development.</p>
+                        <p>When it comes to back-end program development or designing a programs architecture and object interactions, this is the language I like to use most.</p>
                     </div>
                     <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-                        <h3></h3>
-                        <p></p>
-                        <p></p>
+                        <h3>C & Unix</h3>
+                        <p>The only times I have used C was for classes where I was learning it or using it to make the software functionality for <a href="https://www.st.com/" class="ext-link" target="_blank">Discovery</a> Kits.</p>
+                        <p>Even though C is not one of my goto languages, I do enjoy using it. For one project we were given the starting code for a rogue-like simulator which is played in the terminal. We programmed all of the functionality, colors, user handling, and level variations which change for each floor. We had to take into account and minimize array size and memory usage by using pointers.</p>
                     </div>
                     <div class="xp-content" id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-                        <h3></h3>
-                        <p></p>
-                        <p></p>
+                        <h3>Python</h3>
+                        <p>I actually did not know Python until I had to use it for a distributed systems course (not a fun start to a graduate course). That being said, it is definitely at the top of my list for goto languages, for both simple and complex tasks.</p>
+                        <p>So far I have used it for making a eventual consistency distributed system with <a href="https://redis.io/" class="ext-link" target="_blank">Redis</a> and for learning, and implementing, artificial intelligence concepts.</p>
                     </div>
                 </div>
             </div>
+            <!-- RESEARCH SECTION -->
             <div class="anchor" id="research"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Research Interests</h2>
+                <p class="fadeup-enter">There are three research topics I am most interested in.</p>
                 <div class="tabbed-area fadeup-enter">
                     <div class="tabs" role="tablist" aria-label="Experience Tabs" id="tabs2">
                         <button class="tab" role="tab" aria-controls="panel-0" id="tab-0" tabindex=" 0" aria-selected="true" style="border-color: var(--blue);">Optical Data</button>
-                        <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Transmission</button>
+                        <button class="tab" role="tab" aria-controls="panel-1" id="tab-1" tabindex="-1" aria-selected="false">Transistors</button>
                         <button class="tab" role="tab" aria-controls="panel-2" id="tab-2" tabindex="-1" aria-selected="false">Processing</button>
                     </div>
                     <div class="xp-content" id="panel-0" role="tabpanel" tabindex="0" aria-labelledby="tab-0">
                         <h3>Data Representation</h3>
-                        <p></p>
-                        <p></p>
+                        <p>The first, is incorperating non-binary data representation with optic fiber cables for compressed message transmission.</p>
                     </div>
                     <div class="xp-content" id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1" hidden>
-                        <h3>Translation to Non-Binary base</h3>
-                        <p></p>
-                        <p></p>
+                        <h3>Transistor Equivalent</h3>
+                        <p>The second topic, is to find an optical equivalent of a transistor to store data in this form temporarily.</p>
                     </div>
                     <div class="xp-content" id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
-                        <h3>Transistor Equivalent</h3>
-                        <p></p>
-                        <p></p>
+                        <h3>Optical Processing</h3>
+                        <p>The third topic, is designing processors and other components which can operate using optical formated data.</p>
                     </div>
                 </div>
             </div>
+            <!-- PROJECTS SECTION -->
             <div class="anchor" id="projects"></div>
             <div class="section run">
                 <h2 class="number-heading fadeup-enter">Past Projects</h2>
+                <div id="convolutional"></div>
                 <div class="project fadeup-enter" id="p1">
                     <a href="https://github.com/markus-peterson/convolutionalASL" target="_blank"><img src="./images/Accuracy-Graph.png"/></a>
                     <div>
                         <h3>ASL Neural Network</h3>
-                        <p>In python, I was able to use Keras from <a href="https://www.tensorflow.org/" class="ext-link"  target="_blank">Tensorflow</a>, along with <a href="https://numpy.org/" class="ext-link"  target="_blank">Numpy</a>, to write a 3 layer convolutional neural network to recignize 10 different ASL hand signs.</p>
+                        <p>In python, I was able to use Keras from <a href="https://www.tensorflow.org/" class="ext-link" target="_blank">Tensorflow</a>, along with <a href="https://numpy.org/" class="ext-link" target="_blank">Numpy</a>, to write a 3 layer convolutional neural network to distinguish between 10 different ASL hand signs.</p>
                         <h5>Language: <span>Python</span></h5>
                     </div>
                 </div>
+                <div id="quickpick"></div>
                 <div class="project fadeup-enter" id="p2">
                     <div>
-                        <h3></h3>
-                        <p></p>
-                        <h5></h5>
+                        <h3>Job Portal - QuickPick</h3>
+                        <p>For this project, my group and I used <a href="https://reactjs.org/" class="ext-link" target="_blank">React</a> and <a href="https://nodejs.org/" class="ext-link" target="_blank">Node.js</a> to develope the front-end design and functionallity. For the back-end, we created a Java <a href="https://spring.io/projects/spring-boot" class="ext-link"  target="_blank">Spring Boot</a> application, with <a href="https://spring.io/projects/spring-data-jpa" class="ext-link" target="_blank">JPA</a> and <a href="https://hibernate.org/" class="ext-link" target="_blank">Hibernate</a>, for back-end functionality and for managing the <a href="https://www.postgresql.org/" class="ext-link" target="_blank">PostgreSQL</a> database.</p>
+                        <h5>Front-end: 
+                            <a href="https://reactjs.org/" class="ext-link" target="_blank">React</a>, 
+                            <a href="https://nodejs.org/" class="ext-link" target="_blank">Node.js</a>, 
+                            <a href="https://material-ui.com/" class="ext-link" target="_blank">Material-UI</a>
+                        </h5>
+                        <h5>Back-end: 
+                            <a href="https://spring.io/projects/spring-boot" class="ext-link" target="_blank">Spring Boot</a>, 
+                            <a href="https://spring.io/projects/spring-data-jpa" class="ext-link" target="_blank">JPA</a>, 
+                            <a href="https://hibernate.org/" class="ext-link" target="_blank">Hibernate</a>
+                        </h5>
+                        <h5>Database: 
+                            <a href="https://www.postgresql.org/" class="ext-link" target="_blank">PostgreSQL</a>
+                        </h5>
                     </div>
                     <a href="https://quick-pick-job.herokuapp.com/" target="_blank"><img src="./images/quickpick.png"/></a>
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <p>Built by <a href="https://github.com/markus-peterson" class="ext-link" target="_blank">Markus Peterson</a></p>
+            <p>Email: <a href="mailto:markustpeterson@gmail.com" class="ext-link">markustpeterson@gmail.com</a></p>
+        </footer>
         <div class="loader-wrapper" id="mydiv">
             <svg width="10%" height="10%" viewBox="0 0 520 600" >
                 <path class="hexlogo" d="M260,13.589l-248.223,143.206l0,286.41l248.223,143.206l248.223,-143.206l0,-286.41l-248.223,-143.206Z" style="fill:none;stroke:#0df;stroke-width:20.83px;"/>
@@ -168,6 +186,7 @@
                 $('#mydiv').fadeOut(500);
                 setTimeout(function(){
                     $('.main').attr( "style", "display: flex;" );
+                    $('.footer').attr( "style", "display: block;" );
                 }, 550);
                 setTimeout(function(){
                     $('.intro').children('.fadeup-enter').map(function(i){
@@ -186,7 +205,7 @@
             $(document).ready(function() {
                 $(window).scroll( function(){
                     $('.run').not('.viewed').each( function(){
-                        var top_of_object = $(this).offset().top + $(this).height()* 0.4;
+                        var top_of_object = $(this).offset().top + $(this).height()* 0.2;
                         var bottom_of_window = $(window).scrollTop() + $(window).height();
                         if( bottom_of_window > top_of_object ){
                             $(this).addClass('viewed');
@@ -232,7 +251,11 @@
                 target.setAttribute("style", "border-color: var(--blue);");
                 parent
                     .querySelectorAll('[aria-selected="true"]')
-                    .forEach(t => t.setAttribute("style", "border-color: var(--dark-slate);"));
+                    .forEach(t => {
+                        if(t != target){
+                            t.setAttribute("style", "border-color: var(--dark-slate);")
+                        }
+                    });
                 parent
                     .querySelectorAll('[aria-selected="true"]')
                     .forEach(t => t.setAttribute("aria-selected", false));
